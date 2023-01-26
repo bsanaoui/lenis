@@ -137,11 +137,12 @@ const nextConfig = {
   },
 }
 
+nextConfig.experimental.serverless = true
+
 module.exports = () => {
   const plugins = [withPWA, withBundleAnalyzer]
   return plugins.reduce((acc, plugin) => plugin(acc), {
     ...nextConfig,
-    target: 'serverless'
   })
 }
 
