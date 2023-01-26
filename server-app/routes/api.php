@@ -36,4 +36,4 @@ Route::ApiResource('/contact_us', ContactController::class)->only([
     'store'
 ]);
 
-Route::get('/projects', [ProjectController::class, 'index']);
+// Route::get('/projects', [ProjectController::class, 'index']);
