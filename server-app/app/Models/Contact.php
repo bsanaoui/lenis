@@ -7,7 +7,7 @@ use Jenssegers\Mongodb\Eloquent\Model;
 class Contact extends Model
 {
     protected $connection = 'mongodb';
-	protected $collection = 'contact';
+	protected $collection = 'contacts';
 
     // $fillable to define the model's fields
     protected $fillable = [

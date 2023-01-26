@@ -8,7 +8,7 @@ use Jenssegers\Mongodb\Eloquent\Model;
 class Card extends Model
 {
     protected $connection = 'mongodb';
-	protected $collection = 'card';
+	protected $collection = 'cards';
 
     // $fillable to define the model's fields
     protected $fillable = [
