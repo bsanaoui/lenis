@@ -22,9 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 // Config Route to only list data Projects (Get Method)
-Route::ApiResource('/projects', ProjectController::class)->only([
-    'index'
-]);
+// Route::ApiResource('/projects', ProjectController::class)->only([
+//     'index'
+// ]);
 
 // Config Route to only list data of Cards (Get Method)
 Route::ApiResource('/cards', CardController::class)->only([
@@ -35,3 +35,5 @@ Route::ApiResource('/cards', CardController::class)->only([
 Route::ApiResource('/contact_us', ContactController::class)->only([
     'store'
 ]);
+
+Route::get('/projects', [ProjectController::class, 'index']);
