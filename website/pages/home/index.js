@@ -7,7 +7,6 @@ import { Title } from 'components/intro'
 import { Link } from 'components/link'
 import { ListItem } from 'components/list-item'
 
-import { projects } from 'content/projects'
 import { useScroll } from 'hooks/use-scroll'
 import { Layout } from 'layouts/default'
 import { button, useControls } from 'leva'
@@ -17,6 +16,8 @@ import dynamic from 'next/dynamic'
 import { useEffect, useRef, useState } from 'react'
 import { useIntersection, useWindowSize } from 'react-use'
 import s from './home.module.scss'
+
+import axios from 'axios'
 
 const SFDR = dynamic(() => import('icons/sfdr.svg'), { ssr: false })
 const GitHub = dynamic(() => import('icons/github.svg'), { ssr: false })
@@ -64,6 +65,23 @@ export default function Home() {
 
   const [theme, setTheme] = useState('dark')
   const lenis = useStore(({ lenis }) => lenis)
+
+  const [projects, setProjects] = useState([])
+  
+  const callAPI = () => {
+    axios.get(`https://lenis-server-api-matious.vercel.app/public/api/projects`)
+    .then(res => {
+      const data = res.data;
+      console.log("----------- Debug Projects Endpoint ----------------------");
+      console.log(data.data);
+      setProjects(data.data);
+    })
+
+};
+
+  useEffect(() => {
+    callAPI();
+  }, [])
 
   useControls(
     'lenis',
