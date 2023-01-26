@@ -15,7 +15,7 @@
         "APP_NAME": "ServerApi",
         "APP_ENV": "production",
         "APP_DEBUG": "false",
-        "APP_URL": "https://matious.com/",
+        "APP_URL": "https://lenis-server-api-matious.vercel.app",
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
         "APP_PACKAGES_CACHE": "/tmp/packages.php",
