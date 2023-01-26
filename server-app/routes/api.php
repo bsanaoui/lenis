@@ -6,7 +6,6 @@ use App\Http\Controllers\API\ProjectController;
 use App\Http\Controllers\API\CardController;
 use App\Http\Controllers\API\ContactController;
 
-
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -32,7 +31,7 @@ Route::ApiResource('/cards', CardController::class)->only([
     'index'
 ]);
 
-// Config Route to only list add new Contact (Post Method)
+// Config Route to only add new Contact (Post Method)
 Route::ApiResource('/contact_us', ContactController::class)->only([
     'store'
 ]);
