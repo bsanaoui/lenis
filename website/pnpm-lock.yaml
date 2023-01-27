@@ -43,6 +43,7 @@ specifiers:
   raw-loader: ^4.0.2
   react: ^18.2.0
   react-dom: ^18.2.0
+  react-text-animation: ^0.0.1
   react-use: ^17.4.0
   sass: ^1.57.1
   stats.js: ^0.17.0
@@ -65,6 +66,7 @@ dependencies:
   raw-loader: 4.0.2_webpack@5.75.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-text-animation: 0.0.1_biqbaboplfbrettd7655fr4n2y
   react-use: 17.4.0_biqbaboplfbrettd7655fr4n2y
   three: 0.148.0
   zustand: 4.3.2_react@18.2.0
@@ -5750,6 +5752,17 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-text-animation/0.0.1_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-JfEvUQHteUHrwTNKqT/Pk7EEHIqMcQDISVSWpPAK8iXGzo9UGRCRXOh37ybagUxvMwjaZBxxLeJ6ArPb7zrJVw==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      react: ^16.0.0
+      react-dom: ^16.0.0
+    dependencies:
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-universal-interface/0.6.2_react@18.2.0+tslib@2.4.1:
