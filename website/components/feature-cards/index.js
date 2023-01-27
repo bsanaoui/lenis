@@ -5,8 +5,10 @@ import { Card } from 'components/card'
 import { useScroll } from 'hooks/use-scroll'
 import { clamp, mapRange } from 'lib/maths'
 import dynamic from 'next/dynamic'
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useWindowSize } from 'react-use'
+
+import axios from 'axios'
 
 const AppearTitle = dynamic(
   () => import('components/appear-title').then((mod) => mod.AppearTitle),
@@ -15,35 +17,29 @@ const AppearTitle = dynamic(
 
 import s from './feature-cards.module.scss'
 
-const cards = [
-  { text: 'Run scroll in the main thread' },
-
-  {
-    text: (
-      <>
-        Lightweight <br /> (under 3kb)
-      </>
-    ),
-  },
-  { text: 'Made for 2022+' },
-  { text: 'Bring your own animation library' },
-  {
-    text: <>CONTROL THE SCROLL EASING DURATION</>,
-  },
-  { text: 'Use any element as scroller' },
-  { text: 'Enjoy horizontal + vertical support' },
-  { text: 'Feel free to use “position: sticky” again' },
-  {
-    text: 'touch support',
-  },
-]
-
 export const FeatureCards = () => {
   const element = useRef()
   const [setRef, rect] = useRect()
   const { height: windowHeight } = useWindowSize()
 
   const [current, setCurrent] = useState()
+
+  const [cards, setCards] = useState([])
+
+  const callAPI = () => {
+    axios.get(`https://lenis-server-api-matious.vercel.app/public/api/cards`)
+    .then(res => {
+      const data = res.data;
+      console.log("----------- Debug Projects Endpoint ----------------------");
+      console.log(data.data);
+      setCards(data.data);
+    })
+
+};
+
+  useEffect(() => {
+    callAPI();
+  }, [])
 
   useScroll(
     ({ scroll }) => {
