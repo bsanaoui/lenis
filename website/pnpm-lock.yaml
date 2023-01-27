@@ -12,6 +12,7 @@ overrides:
 
 specifiers:
   '@builder.io/partytown': ^0.7.4
+  '@cyriacbr/react-split-text': ^1.0.0
   '@next/bundle-analyzer': ^13.1.2
   '@react-three/drei': ^9.53.0
   '@react-three/fiber': ^8.10.0
@@ -30,7 +31,7 @@ specifiers:
   eslint-import-resolver-alias: ^1.1.2
   eslint-plugin-import: ^2.27.5
   glslify-loader: ^2.0.0
-  gsap: npm:gsap-trial@^3.11.4
+  gsap: npm:gsap
   leva: ^0.9.34
   nanoevents: ^7.0.1
   next: ^13.1.2
@@ -49,6 +50,7 @@ specifiers:
   zustand: 4.3.2
 
 dependencies:
+  '@cyriacbr/react-split-text': 1.0.0_react@18.2.0
   '@react-three/drei': 9.53.0_ujgrnjqg6qzyiwznfocw5cghpm
   '@react-three/fiber': 8.10.0_4tzez3c2xpzuefjrvhpyy55bva
   '@studio-freight/hamo': 0.5.2_biqbaboplfbrettd7655fr4n2y
@@ -56,7 +58,7 @@ dependencies:
   axios: 1.2.5
   clsx: 1.2.1
   glslify-loader: 2.0.0
-  gsap: /gsap-trial/3.11.4
+  gsap: 3.11.4
   leva: 0.9.34_biqbaboplfbrettd7655fr4n2y
   nanoevents: 7.0.1
   next: 13.1.2_23e7ztf2chqi3ri6onem3l5mii
@@ -1384,6 +1386,15 @@ packages:
   /@corex/deepmerge/4.0.37:
     resolution: {integrity: sha512-PX90bEnrLdxd5e6rSFWsghExMuSw0Uov3fWJuuaoFuUQIS/446diu/4seExK5b+43L+SOBbd2uBGwYUkG1JfCw==}
     dev: true
+
+  /@cyriacbr/react-split-text/1.0.0_react@18.2.0:
+    resolution: {integrity: sha512-WkD88+LjOx1vWVI0hh6flUtnplGnxL7zE1SYFbEFfG0gvAJ3SERwtBqtQV8NoOKNd2dZr/GrfK0sBh460IvtHQ==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+    dependencies:
+      react: 18.2.0
+    dev: false
 
   /@eslint/eslintrc/1.4.1:
     resolution: {integrity: sha512-XXrH9Uarn0stsyldqDYq8r++mROmWRI1xKMXa640Bb//SY1+ECYX6VzT6Lcx5frD0V30XieqJ0oX9I2Xj5aoMA==}
@@ -4383,8 +4394,8 @@ packages:
     resolution: {integrity: sha512-bzh50DW9kTPM00T8y4o8vQg89Di9oLJVLW/KaOGIXJWP/iqCN6WKYkbNOF04vFLJhwcpYUh9ydh/+5vpOqV4YQ==}
     dev: true
 
-  /gsap-trial/3.11.4:
-    resolution: {integrity: sha512-suiNsU6qQs6E1nDDMJb7VJNYXVzijMQE2bFCC4cwQAx+ycfM5jU1tp3R89FNQbz36BbMyc71N8jJOgGK71XJlA==}
+  /gsap/3.11.4:
+    resolution: {integrity: sha512-McHhEguHyExMMnjqKA8G+7TvxmlKQGMbjgwAilnFe1e4id7V/tFveRQ2YMZhTYu0oxHGWvbPltdVYQOu3z1SCA==}
     dev: false
 
   /gzip-size/6.0.0:

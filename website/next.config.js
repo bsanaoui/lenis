@@ -137,7 +137,7 @@ const nextConfig = {
   },
 }
 
-nextConfig.experimental.serverless = true
+// nextConfig.experimental.serverless = true
 
 module.exports = () => {
   const plugins = [withPWA, withBundleAnalyzer]
